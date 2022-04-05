@@ -1,3 +1,5 @@
+import java.nio.channels.ReadPendingException;
+
 import processing.core.PApplet;
 
 public class Sketch extends PApplet {
@@ -24,25 +26,25 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-	drawFace();
+	drawFace(200,40);
      
   }
 
-  private void drawFace(){
+  private void drawFace(int a, int b){
 
-  //Outside of button
+  //face
   fill(255,255,255);
-  ellipse(50, 50, 80, 80); 
+  ellipse(a, b, width/5, height/5); 
 
   //Left hole
   fill(0,0,0);
-  ellipse(20, 50, 10, 10);
+  ellipse(a-20,b-20, width/40, height/40);
 
   //Right hole
   fill(0,0,0);
-  ellipse(60, 50, 10, 10); 
+  ellipse(a+20, b-20, width/40, height/40); 
 
-  line(20,70,80,60);
+  line(a-20,b+10,a+20,b+15);
 
   }
   
