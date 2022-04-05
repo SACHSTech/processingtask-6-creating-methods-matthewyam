@@ -24,12 +24,26 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+	drawFace();
+     
+  }
 
-    stroke(255);
-    line(50, 125, 70, 50);  
+  private void drawFace(){
+
+  //Outside of button
+  fill(255,255,255);
+  ellipse(50, 50, 80, 80); 
+
+  //Left hole
+  fill(0,0,0);
+  ellipse(20, 50, 10, 10);
+
+  //Right hole
+  fill(0,0,0);
+  ellipse(60, 50, 10, 10); 
+
+  line(20,70,80,60);
+
   }
   
   // define other methods down here.
